@@ -1,5 +1,5 @@
 ## Meu curriculo em Ruby & Rails
-<hr>
+
 
 O projeto consiste em uma página de currículo que possui visualização pública mas é alimentada através de um login de administrador. 
 
