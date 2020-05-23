@@ -23,11 +23,20 @@ A idéia é manter o currículo atualizado adicionando informações profissiona
 
 ➡️ Devise
 
-➡️ Heroku
-
 ➡️ PostgreSQL
 
 ➡️ ActiveRecord
+
+➡️ RSPEC
+
+➡️ Factory Bot
+
+➡️ Capybara
+
+➡️ Rubocop
+
+➡️ Simplecov
+
 <hr>
 
 ### Telas principais: 
