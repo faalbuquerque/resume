@@ -31,12 +31,12 @@ gem 'bootsnap', '>= 1.4.2', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-
   # https://github.com/rspec/rspec-rails
   gem 'rspec-rails', '~> 4.0.0'
-
   # https://github.com/thoughtbot/factory_bot/blob/master/GETTING_STARTED.md
   gem "factory_bot_rails"
+  # https://github.com/rubocop-hq/rubocop-rails
+  gem 'rubocop-rails', require: false
 end
 
 group :development do
