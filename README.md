@@ -1,24 +1,34 @@
-# README
+## Meu curriculo em Ruby & Rails
+<hr>
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+O projeto consiste em uma página de currículo que possui visualização pública mas é alimentada através de um login de administrador. 
 
-Things you may want to cover:
+A idéia é manter o currículo atualizado adicionando informações profissionais de forma dinâmica.
 
-* Ruby version
+<hr>
 
-* System dependencies
+### Tecnologias utilizadas:
 
-* Configuration
+➡️ Ruby & Rails
 
-* Database creation
+➡️ HTML
 
-* Database initialization
+➡️ CSS
 
-* How to run the test suite
+➡️ BootStrap
 
-* Services (job queues, cache servers, search engines, etc.)
+➡️ Jquery
 
-* Deployment instructions
+➡️ JavaScript
 
-* ...
+➡️ Devise
+
+➡️ Heroku
+
+➡️ PostgreSQL
+
+➡️ ActiveRecord
+<hr>
+
+### Telas principais: 
+Em desenvolvimento...
