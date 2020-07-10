@@ -23,9 +23,7 @@ pt-BR:
   save: 'salvar'
   return: 'voltar'
   modify: 'alterar'
-  enter: 'entrar'
   password: 'senha'
-  log_in: 'entrar'
   logout: 'sair'
   sign_up: 'cadastrar'
   remember_me: 'lembrar'
@@ -88,6 +86,7 @@ pt-BR:
   dashboard: 'dashboard'
 
   resume: 'currículo'
+  login: 'entrar'
 
   errors:
       messages:
