@@ -6,8 +6,8 @@ feature 'view homepage' do
 
       visit root_path
 
-      expect(page).to have_content("Login")
-      expect(page).to have_content("Meu Curriculo")
+      expect(page).to have_content(I18n.t(:login).capitalize)
+      expect(page).to have_content(I18n.t(:resume).capitalize)
 
     end
   end
