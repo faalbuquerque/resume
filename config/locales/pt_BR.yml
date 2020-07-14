@@ -16,6 +16,7 @@ pt-BR:
       long: "%A, %d de %B de %Y, %H:%M h"
     am: ''
     pm: ''
+  test: 'teste'
   hello: 'olá'
   your_email: 'seu email'
   name: 'nome'
@@ -26,7 +27,7 @@ pt-BR:
   password: 'senha'
   logout: 'sair'
   sign_up: 'cadastrar'
-  remember_me: 'lembrar'
+  remember_me: 'lembrar minha senha'
   email: 'e-mail'
   forgot_your_password: 'esqueceu sua senha?'
   password_confirmation: 'digitar novamente a senha'
@@ -87,6 +88,7 @@ pt-BR:
 
   resume: 'currículo'
   login: 'entrar'
+  log_in: 'vá'
 
   errors:
       messages:

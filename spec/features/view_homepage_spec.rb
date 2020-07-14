@@ -6,7 +6,7 @@ feature 'view homepage' do
 
       visit root_path
 
-      expect(page).to have_content(I18n.t(:login).capitalize)
+      expect(page).to have_content "Logar"
       expect(page).to have_content(I18n.t(:resume).capitalize)
 
     end

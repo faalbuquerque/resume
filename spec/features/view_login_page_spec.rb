@@ -3,16 +3,31 @@ require 'rails_helper'
 feature 'view login page' do
   context 'user' do
     it 'successfully' do
+      # Arrange
+    
+      # Act
+      visit root_path
+      click_link "Logar"
 
-      #visit root_path
-      #click_link "Entrar"
+      # Assert
+      expect(page).to have_content(I18n.t(:email).capitalize)
+      expect(page).to have_content(I18n.t(:password).capitalize)
+      expect(page).to have_content(I18n.t(:log_in).capitalize)
+    end
+
+    it 'already logged in' do
+      # Arrange
+      user = FactoryBot.create(:admin)
       visit new_admin_session_path
-
-      expect(page).to have_content "Login"
-      expect(page).to have_content "Email"
-      expect(page).to have_content "Password"
+      fill_in I18n.t(:email).capitalize, :with => user.email
+      fill_in I18n.t(:password).capitalize, :with => user.password
+      click_button I18n.t(:log_in).capitalize
+      # Act
+    
+      # Assert
+      expect(page).not_to have_content(I18n.t(:email).capitalize)
+      expect(page).not_to have_content(I18n.t(:password).capitalize)
+      expect(page).not_to have_content(I18n.t(:log_in).capitalize)
     end
   end
 end
-
-
