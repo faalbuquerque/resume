@@ -89,6 +89,7 @@ pt-BR:
   resume: 'currículo'
   login: 'entrar'
   login_screen: 'Tela de Login'
+  register_screen: 'Tela de Cadastro'
  
   errors:
       messages:
