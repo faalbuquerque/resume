@@ -3,7 +3,6 @@ require 'rails_helper'
 feature 'view homepage' do
   context 'user' do
     it 'successfully' do
-
       visit root_path
 
       expect(page).to have_content(I18n.t(:login).capitalize)
