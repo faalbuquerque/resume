@@ -26,7 +26,7 @@ pt-BR:
   modify: 'alterar'
   password: 'senha'
   logout: 'sair'
-  sign_up: 'cadastrar'
+  sign_up: 'cadastre-se'
   remember_me: 'lembrar minha senha'
   email: 'e-mail'
   forgot_your_password: 'esqueceu sua senha?'
@@ -88,8 +88,8 @@ pt-BR:
 
   resume: 'currículo'
   login: 'entrar'
-  log_in: 'vá'
-
+  login_screen: 'Tela de Login'
+ 
   errors:
       messages:
         invalid: 'está inválido.'
