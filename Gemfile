@@ -43,6 +43,8 @@ group :development, :test do
   gem "factory_bot_rails"
   # https://github.com/rubocop-hq/rubocop-rails
   gem 'rubocop-rails', require: false
+  # https://github.com/colszowka/simplecov
+  gem 'simplecov'
 end
 
 group :development do
