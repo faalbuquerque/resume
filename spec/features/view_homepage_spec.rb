@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 feature 'view homepage' do
-  context 'user' do
+  context 'admin' do
     it 'successfully' do
       visit root_path
 
