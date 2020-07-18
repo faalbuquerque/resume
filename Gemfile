@@ -42,7 +42,7 @@ group :development, :test do
   # https://github.com/thoughtbot/factory_bot/blob/master/GETTING_STARTED.md
   gem "factory_bot_rails"
   # https://github.com/rubocop-hq/rubocop-rails
-  gem 'rubocop-rails', require: false
+  gem 'rubocop-rails'
   # https://github.com/colszowka/simplecov
   gem 'simplecov'
 end

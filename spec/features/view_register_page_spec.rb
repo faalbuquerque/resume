@@ -1,9 +1,8 @@
 require 'rails_helper'
 
 feature 'view register page' do
-  context 'user' do
+  context 'admin' do
     it 'successfully' do
-    
       visit new_admin_registration_path
 
       expect(page).to have_content(I18n.t(:register_screen))
