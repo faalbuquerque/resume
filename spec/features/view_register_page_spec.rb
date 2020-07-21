@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 feature 'view register page' do
-  context 'admin' do
+  context 'register' do
     it 'successfully' do
       visit root_path
       click_link I18n.t(:login).capitalize

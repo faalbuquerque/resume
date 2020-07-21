@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 feature 'view login page' do
-  context 'admin' do
+  context 'login' do
     it 'successfully' do
       visit root_path
       click_link I18n.t(:login).capitalize
