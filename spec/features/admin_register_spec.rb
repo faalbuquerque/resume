@@ -9,9 +9,9 @@ feature 'register' do
 			click_link I18n.t(:login).capitalize
 			click_link I18n.t(:sign_up).capitalize
 
-			fill_in 'admin_email', :with => 'test@example.com'
-			fill_in 'admin_password', :with => '123456'
-			fill_in 'admin_password_confirmation', :with => '123456'
+			fill_in 'admin_email', with: 'test@example.com'
+			fill_in 'admin_password', with: '123456'
+			fill_in 'admin_password_confirmation', with: '123456'
 			click_button(I18n.t(:sign_up).capitalize)
 
 			expect(page).to have_content 'Dashboard'
@@ -24,9 +24,9 @@ feature 'register' do
 			click_link I18n.t(:login).capitalize
 			click_link I18n.t(:sign_up).capitalize
 
-			fill_in 'admin_email', :with => ''
-			fill_in 'admin_password', :with => ''
-			fill_in 'admin_password_confirmation', :with => ''
+			fill_in 'admin_email', with: ''
+			fill_in 'admin_password', with: ''
+			fill_in 'admin_password_confirmation', with: ''
 			click_button(I18n.t(:sign_up).capitalize)
 
 			expect(page).to have_content 'está com campo vazio, favor corrigir'
@@ -43,9 +43,9 @@ feature 'register' do
 			click_link I18n.t(:login).capitalize
 			click_link I18n.t(:sign_up).capitalize
 
-			fill_in 'admin_email', :with => 'test@example.com'
-			fill_in 'admin_password', :with => '123'
-			fill_in 'admin_password_confirmation', :with => '123'
+			fill_in 'admin_email', with: 'test@example.com'
+			fill_in 'admin_password', with: '123'
+			fill_in 'admin_password_confirmation', with: '123'
 			click_button(I18n.t(:sign_up).capitalize)
 
 			expect(page).to have_content 'Password é muito curto (mínimo: 6 caracteres)'
