@@ -1,3 +1,5 @@
+require 'rails_helper'
+
 feature 'log in' do
   context 'new login' do
     it 'successfully' do

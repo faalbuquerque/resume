@@ -1,3 +1,5 @@
+require 'rails_helper'
+
 feature 'register' do
   context 'new register' do
     it 'successfully' do
