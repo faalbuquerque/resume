@@ -9,8 +9,8 @@ feature 'log in' do
       visit root_path
       click_link I18n.t(:login).capitalize
 
-      fill_in 'admin_email', :with => test.email
-      fill_in 'admin_password', :with => test.password
+      fill_in 'admin_email', with: test.email
+      fill_in 'admin_password', with: test.password
       click_button I18n.t(:login).capitalize
 
       expect(page).to have_content "Dashboard"
@@ -23,8 +23,8 @@ feature 'log in' do
       visit root_path
       click_link I18n.t(:login).capitalize
 
-      fill_in 'admin_email', :with => test.email
-      fill_in 'admin_password', :with => test.password
+      fill_in 'admin_email', with: test.email
+      fill_in 'admin_password', with: test.password
       test.delete
       click_button I18n.t(:login).capitalize
 
@@ -40,8 +40,8 @@ feature 'log in' do
       visit root_path
       click_link I18n.t(:login).capitalize
 
-      fill_in 'admin_email', :with => ''
-      fill_in 'admin_password', :with => ''
+      fill_in 'admin_email', with: ''
+      fill_in 'admin_password', with: ''
       click_button I18n.t(:login).capitalize
 
       expect(page).to have_content 'Email e/ou senha inválidos.'
