@@ -90,6 +90,11 @@ pt-BR:
   login: 'entrar'
   login_screen: 'Tela de Login'
   register_screen: 'Tela de Cadastro'
+  personal_infos: 'Dados Pessoais'
+  add_personal_infos: 'Adicionar Dados Pessoais'
+  add_new_date: 'adicionar dados'
+  edit_personal_infos: 'editar dados pessoais'
+  data_add: 'dados adicionados'
  
   errors:
       messages:
@@ -104,6 +109,11 @@ pt-BR:
         password_confirmation: 'confirmação de senha'
     errors:
       messages:
+        inclusion: 'não selecionada'
         blank: 'está com campo vazio, favor corrigir'
         invalid: 'inserção inválida'
         taken: 'já em uso'
+        confirmation: 'parece diferente, insira igual'
+        too_long: 'supera o limite de caracteres, que é: %{count}'
+        too_short: 'inferior ao mínimo de caracteres'
+        record_invalid: 'inserção inválida'

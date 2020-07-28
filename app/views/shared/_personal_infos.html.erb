@@ -1,0 +1,13 @@
+<%= link_to t(:add_new_date).capitalize, new_personal_info_path %>
+
+<% @personal_infos.each do |personal_info| %>
+	<p><%= personal_info.name %></p>
+	<p><%= personal_info.address %></p>
+  <p><%= personal_info.email %></p>
+	<p><%= personal_info.fone %></p>
+	<p><%= personal_info.links %></p>
+  <p><%= personal_info.goals %></p>
+	
+  <%= link_to 'editar', edit_personal_info_path(personal_info) %> 
+	<%= link_to 'delete', personal_info_path(personal_info), method: 'delete' %>
+<% end %> 

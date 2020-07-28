@@ -4,4 +4,5 @@ Rails.application.routes.draw do
 
   root "home#index"
   resources :dashboard, only: [:index]
+  resources :personal_infos, only: [:index, :new, :create, :show, :edit, :update, :destroy]
 end
