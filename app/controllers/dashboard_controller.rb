@@ -1,6 +1,8 @@
 class DashboardController < ApplicationController
     before_action :authenticate_admin!
     
-    def index
-    end
+	def index
+        @personal_infos = PersonalInfo.all
+    end     
+
 end

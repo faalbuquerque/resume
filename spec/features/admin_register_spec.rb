@@ -36,6 +36,8 @@ feature 'register' do
       expect(page).to have_button(I18n.t(:sign_up).capitalize)
 		end
 		
+
+
 		it 'register failure - data wrong' do
       clean_admin
 
@@ -48,12 +50,14 @@ feature 'register' do
 			fill_in 'admin_password_confirmation', with: '123'
 			click_button(I18n.t(:sign_up).capitalize)
 
-			expect(page).to have_content 'Password é muito curto (mínimo: 6 caracteres)'
+			expect(page).to have_content 'Password inferior ao mínimo de caracteres'
       expect(page).to have_content(I18n.t(:email).capitalize)
 			expect(page).to have_content(I18n.t(:password).capitalize)
 			expect(page).to have_content(I18n.t(:password_confirmation).capitalize)
       expect(page).to have_button(I18n.t(:sign_up).capitalize)
-    end
+		end
+		
+		
   end
 end
   

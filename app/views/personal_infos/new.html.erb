@@ -1,0 +1,27 @@
+<p><%= link_to t(:return).capitalize, personal_infos_path %></p>
+
+<h3><%= t(:add_personal_infos) %></h3>
+
+<%= form_with model: @personal_info, local: true do |f| %>
+
+  <%= f.label :name, 'Nome' %>
+  <%= f.text_field :name %>
+
+  <%= f.label :address, 'Endereco' %>
+  <%= f.text_field :address %>
+
+  <%= f.label :fone, 'Telefone' %>
+  <%= f.telephone_field :fone %>
+
+    <%= f.label :email, 'E-mail' %>
+  <%= f.email_field :email %>
+
+  <%= f.label :links, 'Redes Sociais' %>
+  <%= f.url_field :links %>
+
+  <%= f.label :goals, 'Objetivo' %>
+  <%= f.text_field :goals %>
+
+  <%= f.submit "Salvar" %>
+<% end %>
+
