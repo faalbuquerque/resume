@@ -99,6 +99,7 @@ pt-BR:
   telephone: 'telefone'
   social_networks: 'redes sociais'
   goals: 'Objetivos'
+  delete: 'apagar'
   errors:
       messages:
         invalid: 'está inválido.'
