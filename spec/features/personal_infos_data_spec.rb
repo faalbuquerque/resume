@@ -1,5 +1,4 @@
 require 'rails_helper'
-
 feature 'personal infos form' do
   context 'add data' do
     it 'successfully' do
