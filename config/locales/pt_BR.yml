@@ -95,7 +95,10 @@ pt-BR:
   add_new_date: 'adicionar dados'
   edit_personal_infos: 'editar dados pessoais'
   data_add: 'dados adicionados'
- 
+  address: 'endereço'
+  telephone: 'telefone'
+  social_networks: 'redes sociais'
+  goals: 'Objetivos'
   errors:
       messages:
         invalid: 'está inválido.'
@@ -107,6 +110,13 @@ pt-BR:
         password: 'senha'
         current_password: 'senha atual'
         password_confirmation: 'confirmação de senha'
+      personal_info:
+        name: 'Nome'
+        address: 'Endereço'
+        fone: 'Telefone'
+        email: 'E-mail'
+        links: 'Redes sociais'
+        goals: 'Objetivos'
     errors:
       messages:
         inclusion: 'não selecionada'
