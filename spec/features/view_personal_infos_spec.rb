@@ -16,6 +16,11 @@ feature 'view personal infos' do
 
       expect(page).to have_content(I18n.t(:personal_infos))
     end
+
+    it 'failure' do
+      visit personal_infos_path
+      expect(page).to_not have_content(I18n.t(:personal_infos))
+    end
   end
 end
 

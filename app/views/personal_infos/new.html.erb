@@ -2,26 +2,32 @@
 
 <h3><%= t(:add_personal_infos) %></h3>
 
+<% if @personal_info.errors.any? %>
+  <% @personal_info.errors.full_messages.each do |message| %>
+    <p><%= message %></p>
+  <% end %>
+<% end %>
+
 <%= form_with model: @personal_info, local: true do |f| %>
 
-  <%= f.label :name, 'Nome' %>
+  <%= f.label :name, t(:name).capitalize %>
   <%= f.text_field :name %>
 
-  <%= f.label :address, 'Endereco' %>
+  <%= f.label :address, t(:address).capitalize %>
   <%= f.text_field :address %>
 
-  <%= f.label :fone, 'Telefone' %>
+  <%= f.label :fone, t(:telephone).capitalize %>
   <%= f.telephone_field :fone %>
 
-    <%= f.label :email, 'E-mail' %>
+  <%= f.label :email, t(:email).capitalize %>
   <%= f.email_field :email %>
 
-  <%= f.label :links, 'Redes Sociais' %>
+  <%= f.label :links, t(:social_networks).capitalize %>
   <%= f.url_field :links %>
 
-  <%= f.label :goals, 'Objetivo' %>
+  <%= f.label :goals, t(:goals).capitalize %>
   <%= f.text_field :goals %>
 
-  <%= f.submit "Salvar" %>
+  <%= f.submit t(:save).capitalize %>
 <% end %>
 
