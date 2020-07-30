@@ -1,3 +1,15 @@
 <%= link_to t(:return), dashboard_index_path %>
 
 <h2><%= t(:academic_infos) %></h2>
+
+<%= link_to t(:add_new_date).capitalize, new_academic_info_path %>
+
+<% @academic_infos.each do |academic_info| %>
+  <p><%= academic_info.name_academic %></p>
+  <p><%= academic_info.description_academic %></p>
+  <p><%= academic_info.institution_academic %></p>
+  <p><%= academic_info.conclusion_academic %></p>
+
+  <%= link_to t(:edit).capitalize, edit_academic_info_path(academic_info) %> 
+	<%= link_to t(:delete).capitalize, academic_info_path(academic_info), method: :delete %>
+<% end %>
