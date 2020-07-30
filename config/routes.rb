@@ -6,4 +6,6 @@ Rails.application.routes.draw do
   resources :dashboard, only: %i[index]
   resources :personal_infos, only: %i[index new create show
                                       edit update destroy]
+  resources :academic_infos, only: %i[index new create show
+                                      edit update destroy]
 end
