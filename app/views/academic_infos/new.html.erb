@@ -1,0 +1,25 @@
+<p><%= link_to t(:return).capitalize, academic_infos_path %></p>
+
+<h3><%= t(:add_academic_infos) %></h3>
+
+<% if @academic_info.errors.any? %>
+  <% @academic_info.errors.full_messages.each do |message| %>
+    <p><%= message %></p>
+  <% end %>
+<% end %>
+
+<%= form_with model: @academic_info, local: true do |f| %>
+  <%= f.label :name_academic, t(:name_academic).capitalize %>
+  <%= f.text_field :name_academic %>
+
+  <%= f.label :description_academic, t(:description_academic).capitalize %>
+  <%= f.text_field :description_academic %>
+
+  <%= f.label :institution_academic, t(:institution_academic).capitalize %>
+  <%= f.text_field :institution_academic %>
+
+  <%= f.label :conclusion_academic, t(:conclusion_academic).capitalize %>
+  <%= f.number_field :conclusion_academic %>
+
+  <%= f.submit t(:save).capitalize %>
+<% end %>

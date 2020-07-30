@@ -92,14 +92,22 @@ pt-BR:
   register_screen: 'Tela de Cadastro'
   personal_infos: 'Dados Pessoais'
   add_personal_infos: 'Adicionar Dados Pessoais'
+  add_academic_infos: 'Adicionar Dados Academicos'
   add_new_date: 'adicionar dados'
-  edit_personal_infos: 'editar dados pessoais'
+  edit_personal_infos: 'editar informações pessoais'
   data_add: 'dados adicionados'
   address: 'endereço'
   telephone: 'telefone'
   social_networks: 'redes sociais'
   goals: 'Objetivos'
   delete: 'apagar'
+  academic_infos: 'Informações Academicas'
+  name_academic: 'nome do curso'
+  description_academic: 'descrição'
+  institution_academic: 'nome da instituição'
+  conclusion_academic: 'conclusão'
+  edit_academic_infos: 'editar informações academicas'
+
   errors:
       messages:
         invalid: 'está inválido.'
@@ -118,6 +126,11 @@ pt-BR:
         email: 'E-mail'
         links: 'Redes sociais'
         goals: 'Objetivos'
+      academic_info:
+        name_academic: 'Nome do curso'
+        description_academic: 'Descrição'
+        institution_academic: 'Nome da instituição'
+        conclusion_academic: 'Conclusão'
     errors:
       messages:
         inclusion: 'não selecionada'
