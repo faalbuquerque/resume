@@ -63,7 +63,7 @@ feature 'academic infos' do
       admin = FactoryBot.create(:admin)
       academic_info = FactoryBot.create(:academic_info)
       academic_info_1 = FactoryBot.create(:academic_info, institution_academic: 'Unicamp')
-      academic_info_2 = FactoryBot.create(:academic_info, institution_academic: 'Faap')
+      academic_info_2 = FactoryBot.create(:academic_info, institution_academic: 'FAAP')
       
       visit academic_infos_path
       
@@ -75,7 +75,7 @@ feature 'academic infos' do
 
       expect(page).to have_content 'Fatec'
       expect(page).to_not have_content 'Unicamp'
-      expect(page).to have_content 'Faap'
+      expect(page).to have_content 'FAAP'
     end
   end
 end
