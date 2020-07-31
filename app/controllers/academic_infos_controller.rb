@@ -44,7 +44,7 @@ class AcademicInfosController < ApplicationController
 
   def academic_info_params
     params.require(:academic_info).permit(:name_academic, :description_academic,
-                                          :institution_academic,
-                                          :conclusion_academic)
+                                          :institution_academic, :start_date,
+                                          :conclusion_academic, :end_date)
   end
 end
