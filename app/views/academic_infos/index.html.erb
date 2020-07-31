@@ -6,10 +6,12 @@
 
 <% @academic_infos.each do |academic_info| %>
   <p><%= academic_info.name_academic %></p>
-  <p><%= academic_info.description_academic %></p>
   <p><%= academic_info.institution_academic %></p>
+  <p><%= academic_info.start_date %></p>
+  <p><%= academic_info.end_date %></p>
   <p><%= academic_info.conclusion_academic %></p>
+  <p><%= academic_info.description_academic %></p>
 
-  <%= link_to t(:edit).capitalize, edit_academic_info_path(academic_info) %> 
-	<%= link_to t(:delete).capitalize, academic_info_path(academic_info), method: :delete %>
+  <%= link_to(t(:edit).capitalize, edit_academic_info_path(academic_info), id: "academic_n_#{academic_info.id}") %> 
+	<%= link_to(t(:delete).capitalize, academic_info_path(academic_info), id: "academic_d_#{academic_info.id}", method: :delete) %>
 <% end %>

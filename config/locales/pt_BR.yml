@@ -107,6 +107,8 @@ pt-BR:
   institution_academic: 'nome da instituição'
   conclusion_academic: 'conclusão'
   edit_academic_infos: 'editar informações academicas'
+  start_date: 'data inicial'
+  end_date: 'data final'
 
   errors:
       messages:
@@ -131,6 +133,8 @@ pt-BR:
         description_academic: 'Descrição'
         institution_academic: 'Nome da instituição'
         conclusion_academic: 'Conclusão'
+        start_date: 'Data inicial'
+        end_date: 'Data final'
     errors:
       messages:
         inclusion: 'não selecionada'

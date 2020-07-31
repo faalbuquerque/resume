@@ -12,14 +12,20 @@
   <%= f.label :name_academic, t(:name_academic).capitalize %>
   <%= f.text_field :name_academic %>
 
-  <%= f.label :description_academic, t(:description_academic).capitalize %>
-  <%= f.text_field :description_academic %>
-
   <%= f.label :institution_academic, t(:institution_academic).capitalize %>
   <%= f.text_field :institution_academic %>
 
+  <%= f.label :start_date, t(:start_date).capitalize %>
+  <%= f.date_field :start_date %>
+
+  <%= f.label :end_date, t(:end_date).capitalize %>
+  <%= f.date_field :end_date %>
+
   <%= f.label :conclusion_academic, t(:conclusion_academic).capitalize %>
   <%= f.number_field :conclusion_academic %>
+
+  <%= f.label :description_academic, t(:description_academic).capitalize %>
+  <%= f.text_field :description_academic %>
 
   <%= f.submit t(:save).capitalize %>
 <% end %>

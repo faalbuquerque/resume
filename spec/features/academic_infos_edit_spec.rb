@@ -4,7 +4,10 @@ feature 'academic infos' do
     it 'successfully' do
       clean_admin
       admin = FactoryBot.create(:admin)
-      academic_info = FactoryBot.create(:academic_info)
+
+      academic_info = FactoryBot.create(:academic_info, name_academic: 'Designer')
+      academic_info_1 = FactoryBot.create(:academic_info, name_academic: 'Cientista', institution_academic: 'Fiap')
+      academic_info_2 = FactoryBot.create(:academic_info, name_academic: 'Contador', start_date: '2020-05-06')
 
       visit academic_infos_path
       
@@ -12,19 +15,22 @@ feature 'academic infos' do
       fill_in 'admin_password', with: admin.password
       click_button I18n.t(:login).capitalize
 
-      click_link I18n.t(:edit).capitalize
+      find("a#academic_n_#{academic_info_1.id}").click
 
-      fill_in I18n.t(:name_academic).capitalize, with: 'Analista de Sistemas'
-      fill_in I18n.t(:description_academic).capitalize, with: 'Analise de Sistemas'
+      fill_in I18n.t(:name_academic).capitalize, with: 'Analista'
       fill_in I18n.t(:institution_academic).capitalize, with: 'UNIP'
-      fill_in I18n.t(:conclusion_academic).capitalize, with: '2010'
 
       click_button I18n.t(:save).capitalize
 
-      expect(page).to have_content 'Analista de Sistemas'
-      expect(page).to have_content 'Analise de Sistemas'
+      visit academic_infos_path
+
+      expect(page).to_not have_content 'Cientista'
+      expect(page).to have_content 'Analista'
+      expect(page).to_not have_content 'Fiap'
       expect(page).to have_content 'UNIP'
-      expect(page).to have_content '2010'
+
+      expect(page).to have_content 'Designer'
+      expect(page).to have_content 'Contador'
     end
 
     it 'failure - in blank' do
@@ -56,19 +62,20 @@ feature 'academic infos' do
       clean_admin
       admin = FactoryBot.create(:admin)
       academic_info = FactoryBot.create(:academic_info)
-
+      academic_info_1 = FactoryBot.create(:academic_info, institution_academic: 'Unicamp')
+      academic_info_2 = FactoryBot.create(:academic_info, institution_academic: 'Faap')
+      
       visit academic_infos_path
       
       fill_in 'admin_email', with: admin.email
       fill_in 'admin_password', with: admin.password
       click_button I18n.t(:login).capitalize
 
-      click_link I18n.t(:delete).capitalize
+      find("a#academic_d_#{academic_info_1.id}").click
 
-      expect(page).to_not have_content 'Desenvolvedor de Softwares'
-      expect(page).to_not have_content 'Desenvolver softwares'
-      expect(page).to_not have_content 'Fatec'
-      expect(page).to_not have_content '2012'
+      expect(page).to have_content 'Fatec'
+      expect(page).to_not have_content 'Unicamp'
+      expect(page).to have_content 'Faap'
     end
   end
 end
