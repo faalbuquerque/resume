@@ -93,6 +93,7 @@ pt-BR:
   personal_infos: 'Dados Pessoais'
   add_personal_infos: 'Adicionar Dados Pessoais'
   add_academic_infos: 'Adicionar Dados Academicos'
+  add_courses: 'Adicionar Cursos'
   add_new_date: 'adicionar dados'
   edit_personal_infos: 'editar informações pessoais'
   data_add: 'dados adicionados'
@@ -110,6 +111,15 @@ pt-BR:
   start_date: 'data inicial'
   end_date: 'data final'
   non_existing_data: 'não é possivel realizar sua requisição'
+  courses: 'cursos'
+  name_course: 'nome do curso'
+  description_course: 'descrição'
+  institution_course: 'nome da instituição'
+  time_course: 'carga horária'
+  conclusion_course: 'concluiu o curso?'
+  start_course: 'data inicial'
+  end_course: 'data final'
+  edit_courses: 'editar cursos'
 
   errors:
       messages:
@@ -136,6 +146,14 @@ pt-BR:
         conclusion_academic: 'Conclusão'
         start_date: 'Data inicial'
         end_date: 'Data final'
+      course:
+        name_course: 'Nome do curso'
+        description_course: 'Descrição'
+        institution_course: 'Nome da instituição'
+        time_course: 'Carga horária'
+        conclusion_course: 'Concluiu o curso?'
+        start_course: 'Data inicial'
+        end_course: 'Data final'
     errors:
       messages:
         inclusion: 'não selecionada'
