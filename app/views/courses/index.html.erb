@@ -1,0 +1,19 @@
+<%= link_to t(:return).capitalize, dashboard_index_path %>
+
+<h2><%= t(:courses).capitalize  %></h2>
+
+<%= link_to t(:add_new_date).capitalize, new_course_path %>
+
+<% @courses.each do |course| %>
+
+  <p><%= course.name_course %></p>
+  <p><%= course.description_course %></p>
+  <p><%= course.institution_course %></p>
+  <p><%= course.time_course %></p>
+  <p><%= course.conclusion_course %></p>
+  <p><%= course.start_course %></p>
+  <p><%= course.end_course %></p>
+
+  <%= link_to(t(:edit).capitalize, edit_course_path(course), id: "course_n_#{course.id}") %> 
+	<%= link_to(t(:delete).capitalize, course_path(course), id: "course_d_#{course.id}", method: :delete) %>
+<% end %>

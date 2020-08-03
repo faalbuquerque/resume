@@ -1,0 +1,34 @@
+<p><%= link_to t(:return).capitalize, courses_path %></p>
+
+<h3><%= t(:edit_courses).capitalize %></h3>
+
+<% if @course.errors.any? %>
+  <% @course.errors.full_messages.each do |message| %>
+    <p><%= message %></p>
+  <% end %>
+<% end %>
+
+<%= form_with model: @course, local: true do |f| %>
+  <%= f.label :name_course, t(:name_course).capitalize %>
+  <%= f.text_field :name_course %>
+
+  <%= f.label :description_course, t(:description_course).capitalize %>
+  <%= f.text_field :description_course %>
+
+  <%= f.label :institution_course, t(:institution_course).capitalize %>
+  <%= f.text_field :institution_course %>
+
+  <%= f.label :time_course, t(:time_course).capitalize %>
+  <%= f.text_field :time_course %>
+
+  <%= f.label :conclusion_course, t(:conclusion_course).capitalize %>
+  <%= f.select(:conclusion_course, [:nope, :yep], {include_blank: ' '}, { :style => '' }) %>
+
+  <%= f.label :start_course, t(:start_course).capitalize %>
+  <%= f.date_field :start_course %>
+
+  <%= f.label :end_course, t(:end_course).capitalize %>
+  <%= f.date_field :end_course %>
+
+  <%= f.submit t(:save).capitalize %>
+<% end %>

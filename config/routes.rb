@@ -4,8 +4,7 @@ Rails.application.routes.draw do
 
   root 'home#index'
   resources :dashboard, only: %i[index]
-  resources :personal_infos, only: %i[index new create show
-                                      edit update destroy]
-  resources :academic_infos, only: %i[index new create show
-                                      edit update destroy]
+  resources :personal_infos
+  resources :academic_infos
+  resources :courses
 end
