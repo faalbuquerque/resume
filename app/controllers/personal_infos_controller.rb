@@ -34,10 +34,14 @@ class PersonalInfosController < ApplicationController
   end
 
   def destroy
-    @personal_info = PersonalInfo.find(params[:id])
-    return redirect_to personal_infos_path if @personal_info.delete
+    @personal_infos = PersonalInfo.all
+    @personal_info = PersonalInfo.find(params[:id]) if exists_data
+    if exists_data && @personal_info.delete
+      return redirect_to personal_infos_path
+    end
 
-    render personal_infos_path
+    flash.now[:alert] = t(:non_existing_data).capitalize
+    render :index
   end
 
   private
@@ -45,5 +49,9 @@ class PersonalInfosController < ApplicationController
   def personal_info_params
     params.require(:personal_info).permit(:name, :address, :email,
                                           :fone, :links, :goals)
+  end
+
+  def exists_data
+    PersonalInfo.exists?(params[:id])
   end
 end
