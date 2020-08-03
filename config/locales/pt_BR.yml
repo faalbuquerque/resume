@@ -109,6 +109,7 @@ pt-BR:
   edit_academic_infos: 'editar informações academicas'
   start_date: 'data inicial'
   end_date: 'data final'
+  non_existing_data: 'não é possivel realizar sua requisição'
 
   errors:
       messages:
