@@ -34,10 +34,14 @@ class AcademicInfosController < ApplicationController
   end
 
   def destroy
-    @academic_info = AcademicInfo.find(params[:id])
-    return redirect_to academic_infos_path if @academic_info.delete
+    @academic_infos = AcademicInfo.all
+    @academic_info = AcademicInfo.find(params[:id]) if exists_data
+    if exists_data && @academic_info.delete
+      return redirect_to academic_infos_path
+    end
 
-    render academic_infos_path
+    flash.now[:alert] = t(:non_existing_data).capitalize
+    render :index
   end
 
   private
@@ -46,5 +50,9 @@ class AcademicInfosController < ApplicationController
     params.require(:academic_info).permit(:name_academic, :description_academic,
                                           :institution_academic, :start_date,
                                           :conclusion_academic, :end_date)
+  end
+
+  def exists_data
+    AcademicInfo.exists?(params[:id])
   end
 end
