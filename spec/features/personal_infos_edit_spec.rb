@@ -64,6 +64,26 @@ feature 'personal infos' do
       expect(page).to_not have_content 'Rua teste, 01'
       expect(page).to_not have_content '11 9 9999-9999'
     end
+
+    it 'delete - non existing record' do
+      clean_admin
+      admin = FactoryBot.create(:admin)
+      personal_info = FactoryBot.create(:personal_info)
+    
+      visit personal_infos_path
+      
+      fill_in 'admin_email', with: admin.email
+      fill_in 'admin_password', with: admin.password
+      click_button I18n.t(:login).capitalize
+
+      PersonalInfo.first.destroy!
+
+      click_link I18n.t(:delete).capitalize
+
+      expect(page).to_not have_content 'Fabiane Albuquerque'
+      expect(page).to have_content I18n.t(:non_existing_data).capitalize
+
+    end
   end
 end
 
