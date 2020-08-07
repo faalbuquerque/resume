@@ -1,0 +1,18 @@
+<%= link_to t(:return).capitalize, dashboard_index_path %>
+
+<h2><%= t(:experiences) %></h2>
+
+<%= link_to t(:add_new_date).capitalize, new_experience_path %>
+
+<% @experiences.each do |experience|%>
+
+  <p><%= experience.occupation %></p>
+  <p><%= experience.description_occupation %></p>
+  <p><%= experience.company %></p>
+  <p><%= experience.start_experience %></p>
+  <p><%= experience.end_experience %></p>
+
+  <%= link_to(t(:edit).capitalize, edit_experience_path(experience), id: "experience_e_#{experience.id}") %>
+	<%= link_to(t(:delete).capitalize, experience_path(experience), id: "experience_d_#{experience.id}", method: :delete) %>
+
+<% end %>

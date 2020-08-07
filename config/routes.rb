@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   resources :personal_infos
   resources :academic_infos
   resources :courses
+  resources :experiences
 end

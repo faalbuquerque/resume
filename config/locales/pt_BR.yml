@@ -94,6 +94,7 @@ pt-BR:
   add_personal_infos: 'Adicionar Dados Pessoais'
   add_academic_infos: 'Adicionar Dados Academicos'
   add_courses: 'Adicionar Cursos'
+  add_experiences: 'Adicionar Experiencias Profissionais'
   add_new_date: 'adicionar dados'
   edit_personal_infos: 'editar informações pessoais'
   data_add: 'dados adicionados'
@@ -120,6 +121,13 @@ pt-BR:
   start_course: 'data inicial'
   end_course: 'data final'
   edit_courses: 'editar cursos'
+  experiences: 'Experiências Profissionais'
+  occupation: 'cargo'
+  description_occupation: 'descrição'
+  company: 'empresa'
+  start_experience: 'data de entrada'
+  end_experience: 'data de saida'
+  edit_experience: 'editar experiencia profissional'
 
   errors:
       messages:
@@ -154,6 +162,13 @@ pt-BR:
         conclusion_course: 'Concluiu o curso?'
         start_course: 'Data inicial'
         end_course: 'Data final'
+      experience:
+        experiences: 'Experiências Profissionais'
+        occupation: 'Cargo'
+        description_occupation: 'Descrição'
+        company: 'Empresa'
+        start_experience: 'Data de entrada'
+        end_experience: 'Data de saida'
     errors:
       messages:
         inclusion: 'não selecionada'

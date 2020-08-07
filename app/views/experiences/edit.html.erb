@@ -1,0 +1,29 @@
+<p><%= link_to t(:return).capitalize, experience_path %></p>
+
+<h3><%= t(:edit_experience).capitalize %></h3>
+
+<% if @experience.errors.any? %>
+  <% @experience.errors.full_messages.each do |message| %>
+    <p><%= message %></p>
+  <% end %>
+<% end %>
+
+<%= form_with model: @experience, local: true do |f| %>
+
+  <%= f.label :occupation, t(:occupation).capitalize %>
+  <%= f.text_field :occupation %>
+
+  <%= f.label :description_occupation, t(:description_occupation).capitalize %>
+  <%= f.text_field :description_occupation %>
+
+  <%= f.label :company, t(:company).capitalize %>
+  <%= f.text_field :company %>
+
+  <%= f.label :start_experience, t(:start_experience).capitalize %>
+  <%= f.date_field :start_experience %>
+
+  <%= f.label :end_experience, t(:end_experience).capitalize %>
+  <%= f.date_field :end_experience %>
+
+  <%= f.submit t(:save).capitalize %>
+<% end %>

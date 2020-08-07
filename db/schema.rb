@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_03_203230) do
+ActiveRecord::Schema.define(version: 2020_08_07_195408) do
 
   create_table "academic_infos", force: :cascade do |t|
     t.string "name_academic"
@@ -43,6 +43,16 @@ ActiveRecord::Schema.define(version: 2020_08_03_203230) do
     t.boolean "conclusion_course"
     t.date "start_course"
     t.date "end_course"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "experiences", force: :cascade do |t|
+    t.string "occupation"
+    t.string "description_occupation"
+    t.string "company"
+    t.date "start_experience"
+    t.date "end_experience"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

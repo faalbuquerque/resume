@@ -40,7 +40,7 @@ feature 'academic infos form' do
       fill_in 'admin_password', with: admin.password
       click_button I18n.t(:login).capitalize
 
-      click_link I18n.t(:edit).capitalize
+      click_link I18n.t(:add_new_date).capitalize
 
       fill_in I18n.t(:name_academic).capitalize, with: ''
       fill_in I18n.t(:description_academic).capitalize, with: ''
