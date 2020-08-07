@@ -47,6 +47,26 @@ feature 'courses' do
       expect(page).to_not have_content 'Java'
       expect(page).to have_content 'PHP'
     end
+
+
+    it 'delete - non existing record' do
+      clean_admin
+      admin = FactoryBot.create(:admin)
+      course = FactoryBot.create(:course)
+    
+      visit courses_path
+      
+      fill_in 'admin_email', with: admin.email
+      fill_in 'admin_password', with: admin.password
+      click_button I18n.t(:login).capitalize
+
+      Course.first.destroy!
+
+      click_link I18n.t(:delete).capitalize
+
+      expect(page).to_not have_content 'Desenvolvimento de Software'
+      expect(page).to have_content I18n.t(:non_existing_data).capitalize
+    end
   end
 end
 
