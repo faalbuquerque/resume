@@ -22,7 +22,7 @@
   <%= f.text_field :time_course %>
 
   <%= f.label :conclusion_course, t(:conclusion_course).capitalize %>
-  <%= f.select(:conclusion_course, [:nope, :yep], {include_blank: ' '}, { :style => '' }) %>
+  <%= f.select(:conclusion_course, [:Cursando, :Concluido], {}, { :style => '' }) %>
 
   <%= f.label :start_course, t(:start_course).capitalize %>
   <%= f.date_field :start_course %>

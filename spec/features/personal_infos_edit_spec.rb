@@ -24,29 +24,6 @@ feature 'personal infos' do
       expect(page).to have_content 'http://fa.com'
     end
 
-    it 'failure - in blank' do
-      clean_admin
-      admin = FactoryBot.create(:admin)
-      personal_info = FactoryBot.create(:personal_info)
-
-      visit personal_infos_path
-      
-      fill_in 'admin_email', with: admin.email
-      fill_in 'admin_password', with: admin.password
-      click_button I18n.t(:login).capitalize
-
-      click_link I18n.t(:edit).capitalize
-
-      fill_in I18n.t(:name).capitalize, with: ''
-      fill_in I18n.t(:email).capitalize, with: ''
-      fill_in I18n.t(:social_networks).capitalize, with: ''
-      click_button I18n.t(:save).capitalize
-
-      expect(page).to have_content("#{I18n.t(:name).capitalize} #{I18n.t('activerecord.errors.messages.blank')}")
-      expect(page).to have_content("#{I18n.t(:email).capitalize} #{I18n.t('activerecord.errors.messages.blank')}")
-      expect(page).to have_content("#{I18n.t(:social_networks).capitalize} #{I18n.t('activerecord.errors.messages.blank')}")
-    end
-
     it 'delete' do
       clean_admin
       admin = FactoryBot.create(:admin)

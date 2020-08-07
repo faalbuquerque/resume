@@ -14,6 +14,6 @@
   <p><%= course.start_course %></p>
   <p><%= course.end_course %></p>
 
-  <%= link_to(t(:edit).capitalize, edit_course_path(course), id: "course_n_#{course.id}") %> 
+  <%= link_to(t(:edit).capitalize, edit_course_path(course), id: "course_n_#{course.id}") %>
 	<%= link_to(t(:delete).capitalize, course_path(course), id: "course_d_#{course.id}", method: :delete) %>
 <% end %>
