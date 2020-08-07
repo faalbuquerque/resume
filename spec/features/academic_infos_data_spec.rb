@@ -28,6 +28,31 @@ feature 'academic infos form' do
       expect(page).to have_content '1'
       expect(page).to have_content 'Desenvolvimento de Software'
     end
+
+    it 'failure - in blank' do
+      clean_admin
+      admin = FactoryBot.create(:admin)
+      academic_info = FactoryBot.create(:academic_info)
+
+      visit academic_infos_path
+      
+      fill_in 'admin_email', with: admin.email
+      fill_in 'admin_password', with: admin.password
+      click_button I18n.t(:login).capitalize
+
+      click_link I18n.t(:edit).capitalize
+
+      fill_in I18n.t(:name_academic).capitalize, with: ''
+      fill_in I18n.t(:description_academic).capitalize, with: ''
+      fill_in I18n.t(:institution_academic).capitalize, with: ''
+      fill_in I18n.t(:conclusion_academic).capitalize, with: ''
+      click_button I18n.t(:save).capitalize
+
+      expect(page).to have_content("#{I18n.t(:name_academic).capitalize} #{I18n.t('activerecord.errors.messages.blank')}")
+      expect(page).to have_content("#{I18n.t(:description_academic).capitalize} #{I18n.t('activerecord.errors.messages.blank')}")
+      expect(page).to have_content("#{I18n.t(:institution_academic).capitalize} #{I18n.t('activerecord.errors.messages.blank')}")
+      expect(page).to have_content("#{I18n.t(:conclusion_academic).capitalize} #{I18n.t('activerecord.errors.messages.blank')}")
+    end
   end
 end
 
