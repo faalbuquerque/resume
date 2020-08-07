@@ -1,5 +1,5 @@
 require 'rails_helper'
-feature 'courses' do
+feature 'courses form' do
   context 'edit data' do
     it 'successfully' do
       clean_admin
@@ -47,7 +47,6 @@ feature 'courses' do
       expect(page).to_not have_content 'Java'
       expect(page).to have_content 'PHP'
     end
-
 
     it 'delete - non existing record' do
       clean_admin

@@ -1,5 +1,4 @@
 require 'rails_helper'
-
 feature 'view register page' do
   context 'register' do
     it 'successfully' do

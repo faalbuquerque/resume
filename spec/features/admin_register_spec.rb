@@ -1,5 +1,4 @@
 require 'rails_helper'
-
 feature 'register' do
   context 'new register' do
     it 'successfully' do
@@ -35,8 +34,6 @@ feature 'register' do
 			expect(page).to have_content(I18n.t(:password_confirmation).capitalize)
       expect(page).to have_button(I18n.t(:sign_up).capitalize)
 		end
-		
-
 
 		it 'register failure - data wrong' do
       clean_admin
@@ -56,8 +53,6 @@ feature 'register' do
 			expect(page).to have_content(I18n.t(:password_confirmation).capitalize)
       expect(page).to have_button(I18n.t(:sign_up).capitalize)
 		end
-		
-		
   end
 end
   

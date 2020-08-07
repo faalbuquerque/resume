@@ -1,5 +1,4 @@
 require 'rails_helper'
-
 feature 'view academic infos' do
   context 'academic infos' do
     it 'successfully' do

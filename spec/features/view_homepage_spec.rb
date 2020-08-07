@@ -1,5 +1,4 @@
 require 'rails_helper'
-
 feature 'view homepage' do
   context 'homepage' do
     it 'successfully' do

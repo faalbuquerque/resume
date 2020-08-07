@@ -1,5 +1,5 @@
 require 'rails_helper'
-feature 'academic infos' do
+feature 'academic infos form' do
   context 'edit data' do
     it 'successfully' do
       clean_admin
@@ -70,7 +70,6 @@ feature 'academic infos' do
 
       expect(page).to_not have_content 'Desenvolvedor de Softwares'
       expect(page).to have_content I18n.t(:non_existing_data).capitalize
-
     end
   end
 end
