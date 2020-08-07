@@ -33,9 +33,10 @@ class CoursesController < ApplicationController
 
   def destroy
     @courses = Course.all
-    @course = Course.find(params[:id])
-    return redirect_to courses_path if @course.delete
+    @course = Course.find(params[:id]) if exists_data
+    return redirect_to courses_path if exists_data && @course.delete
 
+    flash.now[:alert] = t(:non_existing_data).capitalize
     render :index
   end
 
@@ -47,4 +48,8 @@ class CoursesController < ApplicationController
                                   :conclusion_course, :start_course,
                                   :end_course)
   end
+end
+
+def exists_data
+  Course.exists?(params[:id])
 end
