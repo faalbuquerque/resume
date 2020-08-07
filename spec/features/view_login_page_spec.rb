@@ -1,5 +1,4 @@
 require 'rails_helper'
-
 feature 'view login page' do
   context 'login' do
     it 'successfully' do

@@ -1,5 +1,4 @@
 require 'rails_helper'
-
 feature 'view dashboard page' do
   context 'dashboard' do
     it 'successfully' do

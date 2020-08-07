@@ -1,5 +1,4 @@
 require 'rails_helper'
-
 feature 'view courses' do
   context 'courses' do
     it 'successfully' do

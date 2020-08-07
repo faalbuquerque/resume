@@ -1,5 +1,4 @@
 require 'rails_helper'
-
 feature 'view personal infos' do
   context 'personal infos' do
     it 'successfully' do

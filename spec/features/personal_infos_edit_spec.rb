@@ -1,5 +1,5 @@
 require 'rails_helper'
-feature 'personal infos' do
+feature 'personal infos form' do
   context 'edit data' do
     it 'successfully' do
       clean_admin
