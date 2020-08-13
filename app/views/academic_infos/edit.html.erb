@@ -22,7 +22,7 @@
   <%= f.date_field :end_date %>
 
   <%= f.label :conclusion_academic, t(:conclusion_academic).capitalize %>
-  <%= f.number_field :conclusion_academic %>
+  <%= f.select(:conclusion_academic, [:Cursando, :Concluido], {include_blank: ''}, { :style => '' }) %>
 
   <%= f.label :description_academic, t(:description_academic).capitalize %>
   <%= f.text_field :description_academic %>

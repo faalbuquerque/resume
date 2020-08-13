@@ -17,7 +17,7 @@ feature 'academic infos form' do
       fill_in I18n.t(:name_academic).capitalize, with: 'Programação'
       fill_in I18n.t(:institution_academic).capitalize, with: 'Fatec'
       fill_in I18n.t(:start_date).capitalize, with: '2000-11-12'
-      fill_in I18n.t(:conclusion_academic).capitalize, with: '1'
+      page.select 'Cursando', from: I18n.t(:conclusion_academic).capitalize
       fill_in I18n.t(:description_academic).capitalize, with: 'Desenvolvimento de Software'
       click_button I18n.t(:save).capitalize
       
@@ -25,7 +25,7 @@ feature 'academic infos form' do
       expect(page).to have_content 'Programação'
       expect(page).to have_content 'Fatec'
       expect(page).to have_content '2000-11-12'
-      expect(page).to have_content '1'
+      expect(page).to have_content 'Cursando'
       expect(page).to have_content 'Desenvolvimento de Software'
     end
 
@@ -45,13 +45,11 @@ feature 'academic infos form' do
       fill_in I18n.t(:name_academic).capitalize, with: ''
       fill_in I18n.t(:description_academic).capitalize, with: ''
       fill_in I18n.t(:institution_academic).capitalize, with: ''
-      fill_in I18n.t(:conclusion_academic).capitalize, with: ''
       click_button I18n.t(:save).capitalize
 
       expect(page).to have_content("#{I18n.t(:name_academic).capitalize} #{I18n.t('activerecord.errors.messages.blank')}")
       expect(page).to have_content("#{I18n.t(:description_academic).capitalize} #{I18n.t('activerecord.errors.messages.blank')}")
       expect(page).to have_content("#{I18n.t(:institution_academic).capitalize} #{I18n.t('activerecord.errors.messages.blank')}")
-      expect(page).to have_content("#{I18n.t(:conclusion_academic).capitalize} #{I18n.t('activerecord.errors.messages.blank')}")
     end
   end
 end
