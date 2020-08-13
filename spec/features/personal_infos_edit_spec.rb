@@ -24,6 +24,36 @@ feature 'personal infos form' do
       expect(page).to have_content 'http://fa.com'
     end
 
+    it 'in blank' do
+      clean_admin
+      test = FactoryBot.create(:admin)
+      personal_info_test = FactoryBot.create(:personal_info)
+
+      visit personal_infos_path
+      
+      fill_in 'admin_email', with: test.email
+      fill_in 'admin_password', with: test.password
+      click_button I18n.t(:login).capitalize
+
+      find("a#personal_e_#{personal_info_test.id}").click
+
+      fill_in I18n.t(:name).capitalize, with: ''
+      fill_in I18n.t(:address).capitalize, with: ''
+      fill_in I18n.t(:telephone).capitalize, with: ''
+      fill_in I18n.t(:email).capitalize, with: ''
+      fill_in I18n.t(:social_networks).capitalize, with: ''
+      fill_in I18n.t(:goals).capitalize, with: ''
+
+      click_button I18n.t(:save).capitalize
+
+      expect(page).to have_content("#{I18n.t(:name).capitalize} #{I18n.t('activerecord.errors.messages.blank')}")
+      expect(page).to have_content("#{I18n.t(:address).capitalize} #{I18n.t('activerecord.errors.messages.blank')}")
+      expect(page).to have_content("#{I18n.t(:telephone).capitalize} #{I18n.t('activerecord.errors.messages.blank')}")
+      expect(page).to have_content("#{I18n.t(:email).capitalize} #{I18n.t('activerecord.errors.messages.blank')}")
+      expect(page).to have_content("#{I18n.t(:social_networks).capitalize} #{I18n.t('activerecord.errors.messages.blank')}")
+      expect(page).to have_content("#{I18n.t(:goals).capitalize} #{I18n.t('activerecord.errors.messages.blank')}")
+    end
+
     it 'delete' do
       clean_admin
       admin = FactoryBot.create(:admin)
@@ -42,7 +72,7 @@ feature 'personal infos form' do
       expect(page).to_not have_content '11 9 9999-9999'
     end
 
-    it 'delete - non existing record' do
+    it 'failure - non existing record' do
       clean_admin
       admin = FactoryBot.create(:admin)
       personal_info = FactoryBot.create(:personal_info)

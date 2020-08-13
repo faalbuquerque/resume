@@ -6,4 +6,6 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Admin.create(email:'curriculo@seed.com', password: 123456)
+Admin.create(email:'user@mail.com', password: 123456)
+
+PersonalInfo.create(name: 'User name', address: 'R. Street name', fone: '+55(11)9 6666-4444', email: 'user@mail.com', links: 'http://dunno.com', goals: 'Work with tech' )
