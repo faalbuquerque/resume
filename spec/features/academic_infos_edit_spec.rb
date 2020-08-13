@@ -49,14 +49,12 @@ feature 'academic infos form' do
       fill_in I18n.t(:name_academic).capitalize, with: ''
       fill_in I18n.t(:description_academic).capitalize, with: ''
       fill_in I18n.t(:institution_academic).capitalize, with: ''
-      fill_in I18n.t(:conclusion_academic).capitalize, with: ''
 
       click_button I18n.t(:save).capitalize
 
       expect(page).to have_content("#{I18n.t(:name_academic).capitalize} #{I18n.t('activerecord.errors.messages.blank')}")
       expect(page).to have_content("#{I18n.t(:description_academic).capitalize} #{I18n.t('activerecord.errors.messages.blank')}")
       expect(page).to have_content("#{I18n.t(:institution_academic).capitalize} #{I18n.t('activerecord.errors.messages.blank')}")
-      expect(page).to have_content("#{I18n.t(:conclusion_academic).capitalize} #{I18n.t('activerecord.errors.messages.blank')}")
     end
 
     it 'delete' do
