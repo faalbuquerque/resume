@@ -28,6 +28,32 @@ feature 'courses form' do
       expect(page).to have_content 'Japones'
     end
 
+    it 'in blank' do
+      clean_admin
+      test = FactoryBot.create(:admin)
+      course_test = FactoryBot.create(:course)
+
+      visit courses_path
+      
+      fill_in 'admin_email', with: test.email
+      fill_in 'admin_password', with: test.password
+      click_button I18n.t(:login).capitalize
+
+      find("a#course_n_#{course_test.id}").click
+
+      fill_in I18n.t(:name_course).capitalize, with: ''
+      fill_in I18n.t(:description_course).capitalize, with: ''
+      fill_in I18n.t(:institution_course).capitalize, with: ''
+      fill_in I18n.t(:time_course).capitalize, with: ''
+
+      click_button I18n.t(:save).capitalize
+
+      expect(page).to have_content("#{I18n.t(:name_course).capitalize} #{I18n.t('activerecord.errors.messages.blank')}")
+      expect(page).to have_content("#{I18n.t(:description_course).capitalize} #{I18n.t('activerecord.errors.messages.blank')}")
+      expect(page).to have_content("#{I18n.t(:institution_course).capitalize} #{I18n.t('activerecord.errors.messages.blank')}")
+      expect(page).to have_content("#{I18n.t(:time_course).capitalize} #{I18n.t('activerecord.errors.messages.blank')}")
+    end
+
     it 'delete' do
       clean_admin
       admin = FactoryBot.create(:admin)
