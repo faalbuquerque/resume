@@ -29,7 +29,7 @@ feature 'academic infos form' do
       expect(page).to have_content 'Desenvolvimento de Software'
     end
 
-    it 'failure - in blank' do
+    it 'in blank' do
       clean_admin
       admin = FactoryBot.create(:admin)
       academic_info = FactoryBot.create(:academic_info)
