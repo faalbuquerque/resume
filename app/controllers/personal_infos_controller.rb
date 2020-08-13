@@ -5,17 +5,6 @@ class PersonalInfosController < ApplicationController
     @personal_infos = PersonalInfo.all
   end
 
-  def new
-    @personal_info = PersonalInfo.new
-  end
-
-  def create
-    @personal_info = PersonalInfo.new(personal_info_params)
-    return redirect_to personal_info_path(@personal_info) if @personal_info.save
-
-    render :new
-  end
-
   def show
     @personal_info = PersonalInfo.find(params[:id])
   end
