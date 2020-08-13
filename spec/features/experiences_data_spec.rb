@@ -28,7 +28,7 @@ feature 'experiences form' do
       expect(page).to have_content '2020-08-07'
     end
 
-    it 'failure - in blank' do
+    it 'in blank' do
       clean_admin
       test = FactoryBot.create(:admin)
 
