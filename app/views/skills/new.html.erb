@@ -1,0 +1,20 @@
+<p><%= link_to t(:return).capitalize, skills_path %></p>
+
+<h3><%= t(:add_skills) %></h3>
+
+<% if @skill.errors.any? %>
+  <% @skill.errors.full_messages.each do |message| %>
+    <p><%= message %></p>
+  <% end %>
+<% end %>
+
+<%= form_with model: @skill, local: true do |f| %>
+
+  <%= f.label :name_skill, "Nome da Skill" %>
+  <%= f.text_field :name_skill %>
+
+  <%= f.label :type_skill, "Tipo" %>
+  <%= f.select(:type_skill, [:Soft, :Hard], {include_blank: ''}, { :style => '' }) %>
+
+  <%= f.submit t(:save).capitalize %>
+<% end %>

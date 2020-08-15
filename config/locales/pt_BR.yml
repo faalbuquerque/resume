@@ -95,6 +95,7 @@ pt-BR:
   add_academic_infos: 'Adicionar Dados Academicos'
   add_courses: 'Adicionar Cursos'
   add_experiences: 'Adicionar Experiencias Profissionais'
+  add_skills: 'Adicionar Skills'
   add_new_date: 'adicionar dados'
   edit_personal_infos: 'editar informações pessoais'
   data_add: 'dados adicionados'
@@ -128,6 +129,9 @@ pt-BR:
   start_experience: 'data de entrada'
   end_experience: 'data de saida'
   edit_experience: 'editar experiencia profissional'
+  name_skill: 'nome da skill'
+  type_skill: 'tipo'
+  edit_skills: 'editar Skills '
 
   errors:
       messages:
@@ -169,6 +173,9 @@ pt-BR:
         company: 'Empresa'
         start_experience: 'Data de entrada'
         end_experience: 'Data de saida'
+      skill:
+        name_skill: 'Nome da Skill'
+        type_skill: 'Tipo'
     errors:
       messages:
         inclusion: 'não selecionada'
