@@ -1,0 +1,14 @@
+<%= link_to t(:return).capitalize, dashboard_index_path %>
+
+<h2><%= "Skills" %></h2>
+
+<%= link_to t(:add_new_date).capitalize, new_skill_path %>
+
+<% @skills.each do |skill| %>
+
+  <p><%= skill.name_skill %></p>
+  <p><%= skill.type_skill %></p>
+
+  <%= link_to(t(:edit).capitalize, edit_skill_path(skill), id: "skill_n_#{skill.id}") %>
+	<%= link_to(t(:delete).capitalize, skill_path(skill), id: "skill_d_#{skill.id}", method: :delete) %>
+<% end %>

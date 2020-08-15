@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   resources :academic_infos
   resources :courses
   resources :experiences
+  resources :skills
 end
