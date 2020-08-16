@@ -9,4 +9,5 @@ Rails.application.routes.draw do
   resources :courses
   resources :experiences
   resources :skills
+  resources :projects
 end

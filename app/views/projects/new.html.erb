@@ -1,0 +1,26 @@
+<p><%= link_to t(:return).capitalize, projects_path %></p>
+
+<h3><%= t(:add_projects) %></h3>
+
+<% if @project.errors.any? %>
+  <% @project.errors.full_messages.each do |message| %>
+    <p><%= message %></p>
+  <% end %>
+<% end %>
+
+<%= form_with model: @project, local: true do |f| %>
+
+  <%= f.label :name_project, t(:name_project).capitalize %>
+  <%= f.text_field :name_project %>
+
+  <%= f.label :description_project, t(:description_project).capitalize %>
+  <%= f.text_field :description_project %>
+
+  <%= f.label :link_project, t(:link_project).capitalize %>
+  <%= f.url_field :link_project %>
+
+  <%= f.label :img_project, t(:img_project).capitalize %>
+  <%= f.url_field :img_project %>
+
+  <%= f.submit t(:save).capitalize %>
+<% end %>

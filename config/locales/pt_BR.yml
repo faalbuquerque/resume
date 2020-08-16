@@ -94,6 +94,7 @@ pt-BR:
   add_personal_infos: 'Adicionar Dados Pessoais'
   add_academic_infos: 'Adicionar Dados Academicos'
   add_courses: 'Adicionar Cursos'
+  add_projects: 'Adicionar Projetos'
   add_experiences: 'Adicionar Experiencias Profissionais'
   add_skills: 'Adicionar Skills'
   add_new_date: 'adicionar dados'
@@ -132,6 +133,12 @@ pt-BR:
   name_skill: 'nome da skill'
   type_skill: 'tipo'
   edit_skills: 'editar Skills '
+  projects: 'Projetos'
+  name_project: 'titulo'
+  description_project: 'descricao'
+  link_project: 'link'
+  img_project: 'imagem do projeto'
+  edit_projects: 'editar projetos'
 
   errors:
       messages:
@@ -176,6 +183,11 @@ pt-BR:
       skill:
         name_skill: 'Nome da Skill'
         type_skill: 'Tipo'
+      project:
+          name_project: 'Titulo'
+          description_project: 'Descricao'
+          link_project: 'Link'
+          img_project: 'Imagem do Projeto'
     errors:
       messages:
         inclusion: 'não selecionada'
