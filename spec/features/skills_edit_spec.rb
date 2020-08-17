@@ -16,7 +16,7 @@ feature 'skills form' do
 
       find("a#skill_n_#{skill_1.id}").click
 
-      fill_in "Nome da Skill", with: 'Atenciosa'
+      fill_in I18n.t(:name_skill).capitalize, with: 'Atenciosa'
       click_button I18n.t(:save).capitalize
 
       visit skills_path
@@ -40,10 +40,12 @@ feature 'skills form' do
 
       find("a#skill_n_#{skill_test.id}").click
 
-      fill_in "Nome da Skill", with: ''
+      fill_in I18n.t(:name_skill).capitalize, with: ''
+      page.select '', from: I18n.t(:type_skill).capitalize
       click_button I18n.t(:save).capitalize
 
-      expect(page).to have_content("Nome da Skill #{I18n.t('activerecord.errors.messages.blank')}")
+      expect(page).to have_content("#{I18n.t(:name_skill).capitalize} #{I18n.t('activerecord.errors.messages.blank')}")
+      expect(page).to have_content("#{I18n.t(:type_skill).capitalize} #{I18n.t('activerecord.errors.messages.blank')}")
     end
 
     it 'delete' do

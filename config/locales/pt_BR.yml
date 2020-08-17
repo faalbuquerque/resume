@@ -130,7 +130,8 @@ pt-BR:
   start_experience: 'data de entrada'
   end_experience: 'data de saida'
   edit_experience: 'editar experiencia profissional'
-  name_skill: 'nome da skill'
+  skills: 'Skills'
+  name_skill: 'Nome da skill'
   type_skill: 'tipo'
   edit_skills: 'editar Skills '
   projects: 'Projetos'
@@ -181,7 +182,7 @@ pt-BR:
         start_experience: 'Data de entrada'
         end_experience: 'Data de saida'
       skill:
-        name_skill: 'Nome da Skill'
+        name_skill: 'Nome da skill'
         type_skill: 'Tipo'
       project:
           name_project: 'Titulo'
