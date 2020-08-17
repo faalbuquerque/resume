@@ -13,8 +13,8 @@ feature 'skills form' do
 
       click_link I18n.t(:add_new_date).capitalize
 
-      fill_in 'Nome da Skill', with: 'Focada'
-      page.select 'Soft', from: "Tipo"
+      fill_in I18n.t(:name_skill).capitalize, with: 'Focada'
+      page.select 'Soft', from: I18n.t(:type_skill).capitalize
 
       click_button I18n.t(:save).capitalize
 
@@ -36,13 +36,13 @@ feature 'skills form' do
 
       click_link I18n.t(:add_new_date).capitalize
 
-      fill_in 'Nome da Skill', with: ''
-      page.select '', from: "Tipo"
+      fill_in I18n.t(:name_skill).capitalize, with: ''
+      page.select '', from: I18n.t(:type_skill).capitalize
 
       click_button I18n.t(:save).capitalize
-      
-      expect(page).to have_content("Nome da Skill #{I18n.t('activerecord.errors.messages.blank')}")
-      expect(page).to have_content("Tipo #{I18n.t('activerecord.errors.messages.blank')}")
+
+      expect(page).to have_content("#{I18n.t(:name_skill).capitalize} #{I18n.t('activerecord.errors.messages.blank')}")
+      expect(page).to have_content("#{I18n.t(:type_skill).capitalize} #{I18n.t('activerecord.errors.messages.blank')}")
     end
   end
 end
