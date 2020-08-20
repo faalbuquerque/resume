@@ -3,5 +3,6 @@ class Experience < ApplicationRecord
   validates :description_occupation, presence: true
   validates :company, presence: true
   validates :start_experience, presence: true
-  validates :end_experience, presence: true
+
+  enum check_work: { Sim: 0, Não: 1 }
 end

@@ -143,6 +143,7 @@ pt-BR:
   link_git: 'Github/Gitlab'
   link_site: 'site'
   view_more: 'ver mais'
+  check_work: 'Trabalho atual?'
   errors:
       messages:
         invalid: 'está inválido.'
@@ -185,6 +186,7 @@ pt-BR:
         company: 'Empresa'
         start_experience: 'Data de entrada'
         end_experience: 'Data de saida'
+        check_work: 'Trabalho atual?'
       skill:
         name_skill: 'Nome da skill'
         type_skill: 'Tipo'

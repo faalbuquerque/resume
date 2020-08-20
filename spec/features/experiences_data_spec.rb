@@ -20,7 +20,6 @@ feature 'experiences form' do
       fill_in I18n.t(:end_experience).capitalize, with: '2020-08-07'
       click_button I18n.t(:save).capitalize
 
-      expect(page).to have_content(I18n.t(:data_add).capitalize)
       expect(page).to have_content 'Desenvolvedor'
       expect(page).to have_content 'Desenvolver sites e sistemas'
       expect(page).to have_content 'SENAI'
@@ -44,7 +43,6 @@ feature 'experiences form' do
       fill_in I18n.t(:description_occupation).capitalize, with: ''
       fill_in I18n.t(:company).capitalize, with: ''
       fill_in I18n.t(:start_experience).capitalize, with: ''
-      fill_in I18n.t(:end_experience).capitalize, with: ''
 
       click_button I18n.t(:save).capitalize
 
@@ -52,7 +50,6 @@ feature 'experiences form' do
       expect(page).to have_content("#{I18n.t(:description_occupation).capitalize} #{I18n.t('activerecord.errors.messages.blank')}")
       expect(page).to have_content("#{I18n.t(:company).capitalize} #{I18n.t('activerecord.errors.messages.blank')}")
       expect(page).to have_content("#{I18n.t(:start_experience).capitalize} #{I18n.t('activerecord.errors.messages.blank')}")
-      expect(page).to have_content("#{I18n.t(:end_experience).capitalize} #{I18n.t('activerecord.errors.messages.blank')}")
     end
   end
 end

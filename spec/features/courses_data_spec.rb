@@ -50,8 +50,7 @@ feature 'courses form' do
       fill_in I18n.t(:institution_course).capitalize, with: ''
       fill_in I18n.t(:time_course).capitalize, with: ''
       fill_in I18n.t(:start_course).capitalize, with: ''
-      fill_in I18n.t(:end_course).capitalize, with: ''
-
+    
       click_button I18n.t(:save).capitalize
       
       expect(page).to have_content("#{I18n.t(:name_course).capitalize} #{I18n.t('activerecord.errors.messages.blank')}")
@@ -59,7 +58,6 @@ feature 'courses form' do
       expect(page).to have_content("#{I18n.t(:institution_course).capitalize} #{I18n.t('activerecord.errors.messages.blank')}")
       expect(page).to have_content("#{I18n.t(:time_course).capitalize} #{I18n.t('activerecord.errors.messages.blank')}")
       expect(page).to have_content("#{I18n.t(:start_course).capitalize} #{I18n.t('activerecord.errors.messages.blank')}")
-      expect(page).to have_content("#{I18n.t(:end_course).capitalize} #{I18n.t('activerecord.errors.messages.blank')}")
     end
   end
 end
