@@ -3,7 +3,7 @@ FactoryBot.define do
     name_course { 'Desenvolvimento de Software' }
     description_course { 'Desenvolver sites e sistemas' }
     institution_course { 'Caelum' }
-    time_course { '100 horas' }
+    time_course { '100' }
     conclusion_course { true }
     start_course { '2020-01-02' }
     end_course { '2020-08-03' }
