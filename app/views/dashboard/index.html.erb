@@ -1,12 +1,12 @@
 <%=  link_to t(:return).capitalize, root_path %>
 
-<h2>Dashboard</h2>
+<h2><%= t(:dashboard).capitalize %></h2>
 
 <p><%= link_to t(:personal_infos), personal_infos_path %></p>
 <p><%= link_to t(:academic_infos), academic_infos_path %></p>
-<p><%= link_to t(:courses).capitalize, courses_path %></p>
+<p><%= link_to t(:courses), courses_path %></p>
 <p><%= link_to t(:experiences), experiences_path %></p>
-<p><%= link_to "Skills", skills_path %></p>
+<p><%= link_to t(:skills), skills_path %></p>
 <p><%= link_to t(:projects), projects_path %></p>
 
 <%= link_to 'Sair', destroy_admin_session_path, method: :delete %>
