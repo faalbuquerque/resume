@@ -11,7 +11,14 @@ feature 'view dashboard page' do
       fill_in 'admin_password', with: test.password
 			click_button I18n.t(:login).capitalize
 
-      expect(page).to have_content 'Dashboard'
+      expect(page).to have_content(I18n.t(:dashboard).capitalize)
+
+      expect(page).to have_link(I18n.t(:personal_infos))
+      expect(page).to have_link(I18n.t(:academic_infos))
+      expect(page).to have_link(I18n.t(:courses))
+      expect(page).to have_link(I18n.t(:experiences))
+      expect(page).to have_link(I18n.t(:skills))
+      expect(page).to have_link(I18n.t(:projects))
 		end
 		
 		it 'failure - data wrong' do
@@ -23,7 +30,13 @@ feature 'view dashboard page' do
       fill_in 'admin_password', with: ''
 			click_button I18n.t(:login).capitalize
 
-			expect(page).to_not have_content 'Dashboard'
+      expect(page).to_not have_content(I18n.t(:dashboard).capitalize)
+      expect(page).to_not have_link(I18n.t(:personal_infos))
+      expect(page).to_not have_link(I18n.t(:academic_infos))
+      expect(page).to_not have_link(I18n.t(:courses))
+      expect(page).to_not have_link(I18n.t(:experiences))
+      expect(page).to_not have_link(I18n.t(:skills))
+      expect(page).to_not have_link(I18n.t(:projects))
       expect(page).to have_content(I18n.t(:email).capitalize)
       expect(page).to have_content(I18n.t(:password).capitalize)
       expect(page).to have_button(I18n.t(:login).capitalize)
