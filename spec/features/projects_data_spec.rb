@@ -16,14 +16,12 @@ feature 'projects form' do
       fill_in I18n.t(:name_project).capitalize, with: 'Cifras'
       fill_in I18n.t(:description_project).capitalize, with: 'Decodificar Cifra'
       fill_in I18n.t(:link_project).capitalize, with: 'http://cifra.com'
-      fill_in I18n.t(:img_project).capitalize, with: 'imagem'
       click_button I18n.t(:save).capitalize
 
       expect(page).to have_content(I18n.t(:data_add).capitalize)
       expect(page).to have_content 'Cifras'
       expect(page).to have_content 'Decodificar Cifra'
       expect(page).to have_content 'http://cifra.com'
-      expect(page).to have_content 'imagem'
     end
 
     it 'in blank' do
