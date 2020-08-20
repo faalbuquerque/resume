@@ -46,7 +46,7 @@ class ExperiencesController < ApplicationController
   def experience_params
     params.require(:experience).permit(:occupation, :description_occupation,
                                        :company, :start_experience,
-                                       :end_experience)
+                                       :end_experience, :check_work)
   end
 
   def exists_data
