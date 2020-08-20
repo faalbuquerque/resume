@@ -8,4 +8,4 @@
 
 Admin.create(email:'user@mail.com', password: 123456)
 
-PersonalInfo.create(name: 'User name', address: 'R. Street name', fone: '+55(11)9 6666-4444', email: 'user@mail.com', links: 'http://dunno.com', goals: 'Work with tech' )
+PersonalInfo.create(name: 'User name', address: 'R. Street name', fone: '+55(11)9 6666-4444', email: 'user@mail.com', links: 'http://rede-social.com', link_git: 'http://github-gitlab.com', link_site: 'http://meu-site.com', goals: 'Work with tech' )

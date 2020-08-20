@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_16_170340) do
+ActiveRecord::Schema.define(version: 2020_08_20_154406) do
 
   create_table "academic_infos", force: :cascade do |t|
     t.string "name_academic"
@@ -66,6 +66,8 @@ ActiveRecord::Schema.define(version: 2020_08_16_170340) do
     t.string "goals"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "link_git"
+    t.string "link_site"
   end
 
   create_table "projects", force: :cascade do |t|

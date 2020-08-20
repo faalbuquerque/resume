@@ -36,8 +36,8 @@ class PersonalInfosController < ApplicationController
   private
 
   def personal_info_params
-    params.require(:personal_info).permit(:name, :address, :email,
-                                          :fone, :links, :goals)
+    params.require(:personal_info).permit(:name, :address, :email, :fone,
+                                          :links, :goals, :link_git, :link_site)
   end
 
   def exists_data
