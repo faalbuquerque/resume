@@ -18,7 +18,7 @@ feature 'skills form' do
 
       click_button I18n.t(:save).capitalize
 
-      expect(page).to have_content(I18n.t(:data_add).capitalize)
+      expect(page).to have_content(I18n.t(:details).capitalize)
       expect(page).to have_content 'Focada'
       expect(page).to have_content 'Soft'
 

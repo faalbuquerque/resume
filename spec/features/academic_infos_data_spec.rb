@@ -21,7 +21,7 @@ feature 'academic infos form' do
       fill_in I18n.t(:description_academic).capitalize, with: 'Desenvolvimento de Software'
       click_button I18n.t(:save).capitalize
       
-      expect(page).to have_content(I18n.t(:data_add).capitalize)
+      expect(page).to have_content(I18n.t(:details).capitalize)
       expect(page).to have_content 'Programação'
       expect(page).to have_content 'Fatec'
       expect(page).to have_content '2000-11-12'

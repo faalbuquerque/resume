@@ -99,7 +99,7 @@ pt-BR:
   add_skills: 'Adicionar Skills'
   add_new_date: 'adicionar dados'
   edit_personal_infos: 'editar informações pessoais'
-  data_add: 'dados adicionados'
+  details: 'detalhes'
   address: 'endereço'
   telephone: 'telefone'
   social_networks: 'redes sociais'
@@ -143,7 +143,7 @@ pt-BR:
   link_git: 'Github/Gitlab'
   link_site: 'site'
   view_more: 'ver mais'
-  check_work: 'Trabalho atual?'
+  check_work: 'Trabalhando?'
   errors:
       messages:
         invalid: 'está inválido.'
@@ -186,7 +186,7 @@ pt-BR:
         company: 'Empresa'
         start_experience: 'Data de entrada'
         end_experience: 'Data de saida'
-        check_work: 'Trabalho atual?'
+        check_work: 'Trabalhando?'
       skill:
         name_skill: 'Nome da skill'
         type_skill: 'Tipo'
