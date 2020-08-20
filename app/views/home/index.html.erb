@@ -1,5 +1,7 @@
-
-<p><%= link_to t(:login).capitalize, dashboard_index_path %></p>
-
+<% if admin_signed_in? %>
+  <p><%= link_to t(:dashboard).capitalize, dashboard_index_path %></p>
+<% else %>
+  <p><%= link_to t(:login).capitalize, dashboard_index_path %></p>
+<% end %>
 
 <h2><%= t(:resume).capitalize %></h2>
