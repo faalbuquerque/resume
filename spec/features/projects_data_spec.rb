@@ -18,7 +18,7 @@ feature 'projects form' do
       fill_in I18n.t(:link_project).capitalize, with: 'http://cifra.com'
       click_button I18n.t(:save).capitalize
 
-      expect(page).to have_content(I18n.t(:data_add).capitalize)
+      expect(page).to have_content(I18n.t(:details).capitalize)
       expect(page).to have_content 'Cifras'
       expect(page).to have_content 'Decodificar Cifra'
       expect(page).to have_content 'http://cifra.com'

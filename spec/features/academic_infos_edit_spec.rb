@@ -19,7 +19,6 @@ feature 'academic infos form' do
 
       fill_in I18n.t(:name_academic).capitalize, with: 'Analista'
       fill_in I18n.t(:institution_academic).capitalize, with: 'UNIP'
-
       click_button I18n.t(:save).capitalize
 
       visit academic_infos_path
@@ -28,7 +27,6 @@ feature 'academic infos form' do
       expect(page).to have_content 'Analista'
       expect(page).to_not have_content 'Fiap'
       expect(page).to have_content 'UNIP'
-
       expect(page).to have_content 'Designer'
       expect(page).to have_content 'Contador'
     end
@@ -49,7 +47,6 @@ feature 'academic infos form' do
       fill_in I18n.t(:name_academic).capitalize, with: ''
       fill_in I18n.t(:description_academic).capitalize, with: ''
       fill_in I18n.t(:institution_academic).capitalize, with: ''
-
       click_button I18n.t(:save).capitalize
 
       expect(page).to have_content("#{I18n.t(:name_academic).capitalize} #{I18n.t('activerecord.errors.messages.blank')}")
