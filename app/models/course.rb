@@ -5,7 +5,6 @@ class Course < ApplicationRecord
   validates :time_course, presence: true
   validates :conclusion_course, presence: true
   validates :start_course, presence: true
-  validates :end_course, presence: true
 
   enum conclusion_course: { Cursando: false, Concluido: true }
 end
