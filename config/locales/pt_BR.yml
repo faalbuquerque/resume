@@ -114,7 +114,7 @@ pt-BR:
   start_date: 'data inicial'
   end_date: 'data final'
   non_existing_data: 'não é possivel realizar sua requisição'
-  courses: 'cursos'
+  courses: 'Cursos'
   name_course: 'nome do curso'
   description_course: 'descrição'
   institution_course: 'nome da instituição'

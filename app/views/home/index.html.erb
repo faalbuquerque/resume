@@ -5,3 +5,59 @@
 <% end %>
 
 <h2><%= t(:resume).capitalize %></h2>
+
+<p><%= t(:personal_infos) %></p>
+<% @personal_infos.each do |personal_info| %>
+	<p><%= personal_info.name %></p>
+	<p><%= personal_info.address %></p>
+  <p><%= personal_info.email %></p>
+	<p><%= personal_info.fone %></p>
+	<p><%= personal_info.links %></p>
+	<p><%= personal_info.link_git %></p>
+	<p><%= personal_info.link_site %></p>
+  <p><%= personal_info.goals %></p>
+<% end %> 
+
+<p><%= t(:academic_infos) %></p>
+<% @academic_infos.each do |academic_info| %>
+  <p><%= academic_info.name_academic %></p>
+  <p><%= academic_info.institution_academic %></p>
+  <p><%= academic_info.start_date %></p>
+  <p><%= academic_info.end_date %></p>
+  <p><%= academic_info.conclusion_academic %></p>
+  <p><%= academic_info.description_academic %></p>
+<% end %>
+
+<p><%= t(:courses) %></p>
+<% @courses.each do |course| %>
+  <p><%= course.name_course %></p>
+  <p><%= course.description_course %></p>
+  <p><%= course.institution_course %></p>
+  <p><%= course.time_course %></p>
+  <p><%= course.conclusion_course %></p>
+  <p><%= course.start_course %></p>
+  <p><%= course.end_course %></p>
+<% end %>
+
+<p><%= t(:skills) %></p>
+<% @skills.each do |skill| %>
+  <p><%= skill.name_skill %></p>
+  <p><%= skill.type_skill %></p>
+<% end %>
+
+<p><%= t(:experiences) %></p>
+<% @experiences.each do |experience|%>
+  <p><%= experience.occupation %></p>
+  <p><%= experience.description_occupation %></p>
+  <p><%= experience.company %></p>
+  <p><%= experience.start_experience %></p>
+  <p><%= experience.end_experience %></p>
+<% end %>
+
+<p><%= t(:projects) %></p>
+<% @projects.each do |project| %>
+  <p><%= project.name_project %></p>
+  <p><%= project.description_project %></p>
+  <p><%= project.link_project %></p>
+  <p><%= project.img_project %></p>
+<% end %>
