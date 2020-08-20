@@ -142,7 +142,7 @@ pt-BR:
   edit_projects: 'editar projetos'
   link_git: 'Github/Gitlab'
   link_site: 'site'
-
+  view_more: 'ver mais'
   errors:
       messages:
         invalid: 'está inválido.'
