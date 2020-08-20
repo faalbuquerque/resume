@@ -19,7 +19,7 @@
   <%= f.text_field :institution_course %>
 
   <%= f.label :time_course, t(:time_course).capitalize %>
-  <%= f.text_field :time_course %>
+  <%= f.number_field :time_course %>
 
   <%= f.label :conclusion_course, t(:conclusion_course).capitalize %>
   <%= f.select(:conclusion_course, [:Cursando, :Concluido], {}, { :style => '' }) %>

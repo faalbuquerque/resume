@@ -16,7 +16,7 @@ feature 'courses form' do
       fill_in I18n.t(:name_course).capitalize, with: 'Desenvolvimento de Software'
       fill_in I18n.t(:description_course).capitalize, with: 'Um curso legal'
       fill_in I18n.t(:institution_course).capitalize, with: 'SENAI'
-      fill_in I18n.t(:time_course).capitalize, with: '40 horas'
+      fill_in I18n.t(:time_course).capitalize, with: '40'
       page.select 'Concluido', from: I18n.t(:conclusion_course).capitalize
       fill_in I18n.t(:start_course).capitalize, with: '2019-12-30'
       fill_in I18n.t(:end_course).capitalize, with: '2020-02-29'
@@ -27,7 +27,7 @@ feature 'courses form' do
       expect(page).to have_content 'Desenvolvimento de Software'
       expect(page).to have_content 'Um curso legal'
       expect(page).to have_content 'SENAI'
-      expect(page).to have_content '40 horas'
+      expect(page).to have_content '40'
       expect(page).to have_content '01'
       expect(page).to have_content '2019-12-30'
       expect(page).to have_content '2020-02-29'
