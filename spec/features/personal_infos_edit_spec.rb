@@ -41,7 +41,6 @@ feature 'personal infos form' do
       fill_in I18n.t(:address).capitalize, with: ''
       fill_in I18n.t(:telephone).capitalize, with: ''
       fill_in I18n.t(:email).capitalize, with: ''
-      fill_in I18n.t(:social_networks).capitalize, with: ''
       fill_in I18n.t(:goals).capitalize, with: ''
 
       click_button I18n.t(:save).capitalize
@@ -50,7 +49,6 @@ feature 'personal infos form' do
       expect(page).to have_content("#{I18n.t(:address).capitalize} #{I18n.t('activerecord.errors.messages.blank')}")
       expect(page).to have_content("#{I18n.t(:telephone).capitalize} #{I18n.t('activerecord.errors.messages.blank')}")
       expect(page).to have_content("#{I18n.t(:email).capitalize} #{I18n.t('activerecord.errors.messages.blank')}")
-      expect(page).to have_content("#{I18n.t(:social_networks).capitalize} #{I18n.t('activerecord.errors.messages.blank')}")
       expect(page).to have_content("#{I18n.t(:goals).capitalize} #{I18n.t('activerecord.errors.messages.blank')}")
     end
 

@@ -140,6 +140,8 @@ pt-BR:
   link_project: 'link'
   img_project: 'imagem do projeto'
   edit_projects: 'editar projetos'
+  link_git: 'Github/Gitlab'
+  link_site: 'site'
 
   errors:
       messages:
@@ -158,6 +160,8 @@ pt-BR:
         fone: 'Telefone'
         email: 'E-mail'
         links: 'Redes sociais'
+        link_git: 'Github/Gitlab'
+        link_site: 'Site'
         goals: 'Objetivos'
       academic_info:
         name_academic: 'Nome do curso'
