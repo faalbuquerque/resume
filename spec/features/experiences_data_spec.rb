@@ -17,14 +17,14 @@ feature 'experiences form' do
       fill_in I18n.t(:description_occupation).capitalize, with: 'Desenvolver sites e sistemas'
       fill_in I18n.t(:company).capitalize, with: 'SENAI'
       fill_in I18n.t(:start_experience).capitalize, with: '2018-12-11'
-      fill_in I18n.t(:end_experience).capitalize, with: '2020-08-07'
+      page.select 'Sim', from: I18n.t(:check_work).capitalize
       click_button I18n.t(:save).capitalize
 
       expect(page).to have_content 'Desenvolvedor'
       expect(page).to have_content 'Desenvolver sites e sistemas'
       expect(page).to have_content 'SENAI'
       expect(page).to have_content '2018-12-11'
-      expect(page).to have_content '2020-08-07'
+      expect(page).to have_content 'Sim'
     end
 
     it 'in blank' do
