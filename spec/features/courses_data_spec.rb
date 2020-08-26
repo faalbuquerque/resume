@@ -28,7 +28,7 @@ feature 'courses form' do
       expect(page).to have_content 'Um curso legal'
       expect(page).to have_content 'SENAI'
       expect(page).to have_content '40'
-      expect(page).to have_content '01'
+      expect(page).to have_content 'Concluido'
       expect(page).to have_content '2019-12-30'
       expect(page).to have_content '2020-02-29'
     end
