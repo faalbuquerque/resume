@@ -6,48 +6,9 @@
 
 <h2><%= t(:resume).capitalize %></h2>
 
-<p><%= t(:personal_infos) %></p>
-<% @personal_infos.each do |personal_info| %>
-	<p><%= personal_info.name %></p>
-	<p><%= personal_info.address %></p>
-  <p><%= personal_info.email %></p>
-	<p><%= personal_info.fone %></p>
-  <p><%= link_to t(:view_more).capitalize, personal_info_path(personal_info) %></p>
-<% end %> 
-
-<p><%= t(:academic_infos) %></p>
-<% @academic_infos.each do |academic_info| %>
-  <p><%= academic_info.name_academic %></p>
-  <p><%= academic_info.institution_academic %></p>
-  <p><%= link_to t(:view_more).capitalize, academic_info_path(academic_info) %></p>
-<% end %>
-
-<p><%= t(:courses) %></p>
-<% @courses.each do |course| %>
-  <p><%= course.name_course %></p>
-  <p><%= course.description_course %></p>
-  <p><%= course.institution_course %></p>
-  <p><%= link_to t(:view_more).capitalize, course_path(course) %></p>
-<% end %>
-
-<p><%= t(:skills) %></p>
-<% @skills.each do |skill| %>
-  <p><%= skill.name_skill %></p>
-  <p><%= skill.type_skill %></p>
-<% end %>
-
-<p><%= t(:experiences) %></p>
-<% @experiences.each do |experience|%>
-  <p><%= experience.occupation %></p>
-  <p><%= experience.description_occupation %></p>
-  <p><%= experience.company %></p>
-  <p><%= link_to t(:view_more).capitalize, experience_path(experience) %></p>
-<% end %>
-
-<p><%= t(:projects) %></p>
-<% @projects.each do |project| %>
-  <p><%= project.name_project %></p>
-  <p><%= project.description_project %></p>
-  <p><%= project.link_project %></p>
-  <p><%= image_tag(project.img_project) %></p>
-<% end %>
+<p><%= link_to t(:personal_infos), personal_infos_path %></p>
+<p><%= link_to t(:academic_infos), academic_infos_path %></p>
+<p><%= link_to t(:courses), courses_path %></p>
+<p><%= link_to t(:experiences), experiences_path %></p>
+<p><%= link_to t(:skills), skills_path %></p>
+<p><%= link_to t(:projects), projects_path %></p>
